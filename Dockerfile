@@ -29,6 +29,9 @@ RUN pnpm run build
 FROM base AS release
 ARG NX_CLOUD_ACCESS_TOKEN
 
+# 使用阿里云的 Debian 镜像源
+RUN sed -i 's/deb.debian.org/mirrors.aliyun.com/g' /etc/apt/sources.list
+
 RUN apt update && apt install -y dumb-init --no-install-recommends && rm -rf /var/lib/apt/lists/*
 
 COPY --chown=node:node --from=build /app/.npmrc /app/package.json /app/pnpm-lock.yaml ./
