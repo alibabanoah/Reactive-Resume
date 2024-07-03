@@ -22,6 +22,7 @@ export const HeroSection = () => (
         initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
       >
+      {/*
         <div className="hidden items-center gap-x-4 sm:flex">
           <Badge>{t`Version 4`}</Badge>
 
@@ -33,17 +34,25 @@ export const HeroSection = () => (
             <ArrowRight />
           </a>
         </div>
+        */}
 
         <div className="mt-10 space-y-2">
-          <h6 className="text-base font-bold tracking-wide">{t`Finally,`}</h6>
+         {/* <h6 className="text-base font-bold tracking-wide">{t`Finally,`}</h6> */}
           <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
             {t`A free and open-source resume builder`}
           </h1>
         </div>
-
+        <br />
+        
+          <p style={{ color: 'orange' }} className="prose prose-base prose-zinc mt-6 text-lg leading-8 dark:prose-invert">
+            {t`CSlogan.`}
+          </p>
+	
+	{/*
         <p className="prose prose-base prose-zinc mt-6 text-lg leading-8 dark:prose-invert">
           {t`A free and open-source resume builder that simplifies the process of creating, updating, and sharing your resume.`}
         </p>
+	*/}
 
         <div className="mt-10 flex items-center gap-x-8">
           <HeroCTA />

@@ -20,11 +20,13 @@ export const LocaleProvider = ({ children }: Props) => {
   useEffect(() => {
     const detectedLocale =
       detect(fromUrl("locale"), fromStorage("locale"), userLocale, defaultLocale) ?? defaultLocale;
-
+      console.log("Detected Locale:", detectedLocale);  // 添加调试信息
     // Activate the locale only if it's supported
     if (languages.some((lang) => lang.locale === detectedLocale)) {
+      console.log("Activating detected locale:", detectedLocale);  // 添加调试信息
       void dynamicActivate(detectedLocale);
     } else {
+      console.log("Activating detected locale:", detectedLocale);  // 添加调试信息
       void dynamicActivate(defaultLocale);
     }
   }, [userLocale]);

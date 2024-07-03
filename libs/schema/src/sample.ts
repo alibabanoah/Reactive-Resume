@@ -99,7 +99,7 @@ export const sampleResume: ResumeData = {
       ],
     },
     experience: {
-      name: "Experience",
+      name: "工作经历",
       columns: 1,
       separateLinks: true,
       visible: true,
@@ -136,7 +136,7 @@ export const sampleResume: ResumeData = {
       ],
     },
     volunteer: {
-      name: "Volunteering",
+      name: "自愿者服务",
       columns: 1,
       separateLinks: true,
       visible: true,

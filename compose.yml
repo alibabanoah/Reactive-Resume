@@ -5,6 +5,8 @@ services:
     build: .
     ports:
       - "3000:3000"
+    volumes:
+      - ./apps:/app/apps  # 
     depends_on:
       postgres:
         condition: service_healthy
@@ -15,11 +17,12 @@ services:
     environment:
       # -- Environment Variables --
       PORT: 3000
-      NODE_ENV: production
+      #NODE_ENV: production
+      NODE_ENV: development  # 使用开发模式
 
       # -- URLs --
       PUBLIC_URL: http://localhost:3000
-      STORAGE_URL: http://localhost:9001/default
+      STORAGE_URL: http://resaipro.com/default
 
       # -- Printer (Chrome) --
       CHROME_TOKEN: chrome_token
@@ -45,6 +48,8 @@ services:
       STORAGE_SECRET_KEY: minioadmin
       STORAGE_USE_SSL: "false"
       STORAGE_SKIP_BUCKET_CHECK: "false"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
 
   postgres:
     image: postgres:15

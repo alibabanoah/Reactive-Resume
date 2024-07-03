@@ -32,13 +32,13 @@ export const HomePage = () => {
 
       <HeroSection />
       <LogoCloudSection />
-      <StatisticsSection />
-      <FeaturesSection />
+      {/*<StatisticsSection /> 
+      <FeaturesSection /> */}
       <TemplatesSection />
-      <TestimonialsSection />
+      {/* <TestimonialsSection />
       <SupportSection />
       <FAQSection />
-      <ContributorsSection />
+      <ContributorsSection /> */}
     </main>
   );
 };

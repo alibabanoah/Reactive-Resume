@@ -6,6 +6,7 @@ type Props = {
   className?: string;
 };
 
+{/*
 export const Logo = ({ size = 32, className }: Props) => {
   const { isDarkMode } = useTheme();
 
@@ -32,3 +33,4 @@ export const Logo = ({ size = 32, className }: Props) => {
     />
   );
 };
+*/}

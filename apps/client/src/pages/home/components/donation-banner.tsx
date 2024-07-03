@@ -13,9 +13,7 @@ export const DonationBanner = () => (
     className="hidden w-screen items-center justify-center gap-x-2 bg-zinc-800 text-xs font-bold leading-relaxed text-zinc-50 lg:flex"
   >
     <HandHeart weight="bold" size={14} className="shrink-0" />
-    <span>
-      If this project has helped you, please consider donating to Reactive Resume as we're running
-      out of server resources with the increasing number of users.
+    <span> test!
     </span>
   </motion.a>
 );

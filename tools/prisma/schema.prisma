@@ -24,7 +24,7 @@ model User {
   picture          String?
   username         String   @unique
   email            String   @unique
-  locale           String   @default("en-US")
+  locale           String   @default("zh-CN")
   emailVerified    Boolean  @default(false)
   twoFactorEnabled Boolean  @default(false)
   createdAt        DateTime @default(now())

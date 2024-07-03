@@ -30,13 +30,13 @@ const Logo = ({ company }: LogoProps) => (
   </div>
 );
 
-const logoList: string[] = ["amazon", "google", "postman", "twilio", "zalando"];
+const logoList: string[] = ["xiaomi", "weilai", "postman", "twilio", "zalando","alibaba","alipay","baidu","douyin","huawei","keda","lixiang","tencent","amazon","google"]
 
 export const LogoCloudSection = () => (
   <section id="logo-cloud" className="relative py-24 sm:py-32">
     <div className="mx-auto max-w-7xl px-6 lg:px-8">
       <p className="text-center text-lg leading-relaxed">
-        {t`C阳咨询已经帮助100+职场人员完成以下公司入职:`}
+        {t`Reactive Resume has helped people land jobs at these great companies:`}
       </p>
       <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
         {logoList.map((company) => (
@@ -44,7 +44,7 @@ export const LogoCloudSection = () => (
         ))}
       </div>
       <p className="mx-auto mt-8 max-w-sm text-center leading-relaxed">
-        <Trans>
+       {/* <Trans>
           If this app has helped you with your job hunt, let me know by reaching out through{" "}
           <a
             target="_blank"
@@ -55,7 +55,7 @@ export const LogoCloudSection = () => (
             this contact form
           </a>
           .
-        </Trans>
+        </Trans> */}
       </p>
     </div>
   </section>

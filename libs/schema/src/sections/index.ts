@@ -104,19 +104,20 @@ export const defaultSection: Section = {
 };
 
 export const defaultSections: Sections = {
-  summary: { ...defaultSection, id: "summary", name: "Summary", content: "" },
-  awards: { ...defaultSection, id: "awards", name: "Awards", items: [] },
-  certifications: { ...defaultSection, id: "certifications", name: "Certifications", items: [] },
-  education: { ...defaultSection, id: "education", name: "Education", items: [] },
-  experience: { ...defaultSection, id: "experience", name: "Experience", items: [] },
-  volunteer: { ...defaultSection, id: "volunteer", name: "Volunteering", items: [] },
-  interests: { ...defaultSection, id: "interests", name: "Interests", items: [] },
-  languages: { ...defaultSection, id: "languages", name: "Languages", items: [] },
-  profiles: { ...defaultSection, id: "profiles", name: "Profiles", items: [] },
-  projects: { ...defaultSection, id: "projects", name: "Projects", items: [] },
-  publications: { ...defaultSection, id: "publications", name: "Publications", items: [] },
+  summary: { ...defaultSection, id: "summary", name: "个人总结", content: "" },
+  awards: { ...defaultSection, id: "awards", name: "荣誉", items: [] },
+  certifications: { ...defaultSection, id: "certifications", name: "证书", items: [] },
+  education: { ...defaultSection, id: "education", name: "教育", items: [] },
+  experience: { ...defaultSection, id: "experience", name: "工作经历", items: [] },
+  volunteer: { ...defaultSection, id: "volunteer", name: "自愿者经历", items: [] },
+  interests: { ...defaultSection, id: "interests", name: "兴趣", items: [] },
+  languages: { ...defaultSection, id: "languages", name: "语言", items: [] },
+  profiles: { ...defaultSection, id: "profiles", name: "社交账号", items: [] },
+  projects: { ...defaultSection, id: "projects", name: "项目", items: [] },
+
+  publications: { ...defaultSection, id: "publications", name: "出版物", items: [] },
   references: { ...defaultSection, id: "references", name: "References", items: [] },
-  skills: { ...defaultSection, id: "skills", name: "Skills", items: [] },
+  skills: { ...defaultSection, id: "skills", name: "技能", items: [] },
   custom: {},
 };
 

@@ -7,6 +7,7 @@ ARG NX_CLOUD_ACCESS_TOKEN
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
 
+#RUN apt-get update && apt-get install -y curl wget libcurl4
 RUN corepack enable pnpm && corepack prepare pnpm@9.0.6 --activate
 
 WORKDIR /app

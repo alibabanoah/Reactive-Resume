@@ -6,9 +6,15 @@ import { toast } from "@/client/hooks/use-toast";
 import { axios } from "@/client/libs/axios";
 
 export const printResume = async (data: { id: string }) => {
+  try{
   const response = await axios.get<UrlDto>(`/resume/print/${data.id}`);
+  console.log("Print resume response:", response.data);
 
   return response.data;
+  }catch(error){
+  console.error("Error in printResume service:", error);
+  throw error;
+  }
 };
 
 export const usePrintResume = () => {

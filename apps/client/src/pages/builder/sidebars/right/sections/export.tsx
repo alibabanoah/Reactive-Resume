@@ -22,15 +22,33 @@ const openInNewTab = (url: string) => {
   if (win) win.focus();
 };
 
+
+
 export const ExportSection = () => {
   const { printResume, loading } = usePrintResume();
 
+{/*
   const onPdfExport = async () => {
     const { resume } = useResumeStore.getState();
     const { url } = await printResume({ id: resume.id });
 
     openInNewTab(url);
   };
+*/}
+
+const onPdfExport = async () => {
+  const { resume } = useResumeStore.getState();
+  try {
+    const { url } = await printResume({ id: resume.id });
+    console.log("PDF URL:", url);
+    openInNewTab(url);
+  } catch (error) {
+    console.error("Error exporting PDF:", error);
+    alert("Failed to export PDF. Please check the server logs for more details.");
+  }
+};
+
+
 
   return (
     <section id="export" className="grid gap-y-6">
