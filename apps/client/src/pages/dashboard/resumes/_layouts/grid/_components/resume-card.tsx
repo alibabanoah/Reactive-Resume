@@ -123,10 +123,12 @@ export const ResumeCard = ({ resume }: Props) => {
           <FolderOpen size={14} className="mr-2" />
           {t`Open`}
         </ContextMenuItem>
+        {/*
         <ContextMenuItem onClick={onUpdate}>
           <PencilSimple size={14} className="mr-2" />
           {t`Rename`}
         </ContextMenuItem>
+        */}
         <ContextMenuItem onClick={onDuplicate}>
           <CopySimple size={14} className="mr-2" />
           {t`Duplicate`}

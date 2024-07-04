@@ -61,16 +61,9 @@ export const ResumeDialog = () => {
 
   const loading = createLoading || updateLoading || deleteLoading || duplicateLoading;
 
-  const generateRandomString = () => {
-    return Math.random().toString().slice(2, 6);
-  };
-
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
-    defaultValues: {
-      title: generateRandomString(),
-      slug: generateRandomString(),
-    },
+    defaultValues: { title: "", slug: "" },
   });
 
   useEffect(() => {
@@ -117,8 +110,7 @@ export const ResumeDialog = () => {
   };
 
   const onReset = () => {
-    const randomString = generateRandomString();
-    if (isCreate) form.reset({ title: randomString, slug: randomString });
+    if (isCreate) form.reset({ title: "", slug: "" });
     if (isUpdate)
       form.reset({ id: payload.item?.id, title: payload.item?.title, slug: payload.item?.slug });
     if (isDuplicate)
@@ -202,7 +194,20 @@ export const ResumeDialog = () => {
                   <FormLabel>{t`Title`}</FormLabel>
                   <FormControl>
                     <div className="flex items-center justify-between gap-x-2">
-                      <Input {...field} className="flex-1" readOnly />
+                      <Input {...field} className="flex-1" />
+
+                      {(isCreate || isDuplicate) && (
+                        <Tooltip content={t`Generate a random title for your resume`}>
+                          <Button
+                            size="icon"
+                            type="button"
+                            variant="outline"
+                            onClick={onGenerateRandomName}
+                          >
+                            <MagicWand />
+                          </Button>
+                        </Tooltip>
+                      )}
                     </div>
                   </FormControl>
                   <FormDescription>
@@ -212,8 +217,7 @@ export const ResumeDialog = () => {
                 </FormItem>
               )}
             />
-          
-            {/*
+
             <FormField
               name="slug"
               control={form.control}
@@ -221,13 +225,12 @@ export const ResumeDialog = () => {
                 <FormItem>
                   <FormLabel>{t`Slug`}</FormLabel>
                   <FormControl>
-                    <Input {...field} readOnly />
+                    <Input {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
               )}
             />
-            */}
 
             <DialogFooter>
               <div className="flex items-center">
@@ -264,4 +267,3 @@ export const ResumeDialog = () => {
     </Dialog>
   );
 };
-

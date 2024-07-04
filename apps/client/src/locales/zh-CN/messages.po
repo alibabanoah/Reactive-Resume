@@ -1492,7 +1492,7 @@ msgstr "此部分针对您对此简历的个人注释。这里的内容保持私
 
 #: apps/client/src/pages/dashboard/resumes/_dialogs/resume.tsx:214
 msgid "Tip: You can name the resume referring to the position you are applying for."
-msgstr "提示：您可以根据您要申请的职位来命名简历。"
+msgstr "提示：系统将默认生成一个简历标题。"
 
 #: apps/client/src/pages/builder/sidebars/left/dialogs/awards.tsx:39
 msgctxt "Name of the Award"
